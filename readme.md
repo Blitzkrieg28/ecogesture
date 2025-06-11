@@ -1,53 +1,60 @@
 # 🌿 EcoGesture
 
-**EcoGesture** is a digital platform dedicated to enhancing accessibility and inclusivity by bridging the gap between spoken language and sign language. With the power of modern web technologies, EcoGesture allows users to convert **text, voice, or letters into sign language** in real-time, helping people connect and express themselves with ease.
+**EcoGesture** is a digital platform designed to make communication more accessible and inclusive by bridging the gap between spoken language and sign language. Using modern web technologies, EcoGesture enables users to convert **text, voice, or letters into sign language** in real-time, empowering people to connect and express themselves effortlessly.
 
-* 🌐 **Live Site**: [https://ecogesture.vercel.app](https://ecogesture.vercel.app)
-* 📂 **GitHub Repo**: [https://github.com/Blitzkrieg28/ecogesture](https://github.com/Blitzkrieg28/ecogesture)
+- 🌐 **Live Site:** [https://ecogesture.vercel.app](https://ecogesture.vercel.app)
+- 📂 **GitHub Repo:** [https://github.com/Blitzkrieg28/ecogesture](https://github.com/Blitzkrieg28/ecogesture)
 
 ---
 
-## 🔑 Key Features
+## 🔑 Features
 
-* 🔐 Secure Sign In & Sign Up with JWT Authentication
-* 🛋️ Password Recovery via OTP Verification
-* ✍️ **Text-to-Sign** Language Conversion with Built-in Translator
-* 🎤 **Voice-to-Sign** Interpretation
-* ✉️ **Letter-to-Sign** Mode for Character-Level Input
-* 🧑‍🧠 AI Chatbot for Guided Assistance
-* 🔄 Fully Responsive and Accessible Interface
+- 🔐 Secure Sign In & Sign Up with JWT Authentication
+- 🛋️ Password Recovery via OTP Verification
+- ✍️ **Text-to-Sign** Language Conversion with Built-in Translator
+- 🎤 **Voice-to-Sign** Interpretation
+- ✉️ **Letter-to-Sign** Mode for Character-Level Input
+- 🧑‍🧠 AI Chatbot for Guided Assistance
+- 🔄 Fully Responsive and Accessible Interface
 
 ---
 
 ## 🛠 Tech Stack
 
-* **Frontend**: React.js with useReducer, Vercel Deployment
-* **Backend**: Node.js, Express.js, MongoDB, Render Deployment
-* **Authentication**: JWT (JSON Web Tokens)
-* **Additional**: OTP-based Password Reset, AI Integration
+- **Frontend:** React.js (with useReducer), deployed on Vercel
+- **Backend:** Node.js, Express.js, MongoDB, deployed on Render
+- **Authentication:** JWT (JSON Web Tokens)
+- **Additional:** OTP-based Password Reset, AI Integration
 
 ---
 
-## 📁 Project Structure (Frontend & Backend Overview)
+## 📁 Project Structure
 
 ```
 EcoGesture/
 ├── Backend/
 │   ├── controllers/
-│   ├── routes/
-│   ├── models/
 │   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── utils/
+│   ├── .env.example
 │   └── index.js
 ├── Frontend/
 │   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── reducers/
-│   │   └── App.js
+│   └── src/
+│       ├── assets/
+│       ├── components/
+│       ├── pages/
+│       ├── reducers/
+│       ├── services/
+│       ├── utils/
+│       └── App.js
+│   ├── .env.example
 │   └── package.json
-├── .env.example
-└── README.md
+├── .gitignore
+├── README.md
+└── package.json
 ```
 
 ---
@@ -73,12 +80,11 @@ cd ../Backend
 npm install
 ```
 
-### 3. Create `.env` Files for Both Frontend & Backend
+### 3. Configure Environment Variables
 
-Use `.env.example` as a reference and fill in required variables:
+Use the provided `.env.example` files as templates and fill in the required variables:
 
-**Backend .env**
-
+**Backend `.env`**
 ```
 PORT=5000
 MONGODB_URI=your_mongo_uri
@@ -86,12 +92,12 @@ JWT_SECRET=your_jwt_secret
 EMAIL_API_KEY=your_email_service_api_key
 ```
 
-
+**Frontend `.env`**
 ```
-REACT_APP_API_URL= https://ecogesture-backend2.onrender.com
+REACT_APP_API_URL=https://ecogesture-backend2.onrender.com
 ```
 
-### 4. Run the App
+### 4. Run the Application
 
 ```bash
 # Start backend
@@ -107,9 +113,9 @@ npm start
 
 ## 🔐 Authentication
 
-* All sensitive routes are protected with JWT.
-* OTP verification is used for password reset.
-* Include JWT in request headers like this:
+- All sensitive routes are protected with JWT.
+- OTP verification is used for password reset.
+- Include JWT in request headers as follows:
 
 ```
 Authorization: Bearer <your_token>
@@ -117,22 +123,20 @@ Authorization: Bearer <your_token>
 
 ---
 
-## 📘 API Overview (Backend Routes Summary)
+## 📘 API Overview
 
-* `POST /auth/signup` – Register New User
-* `POST /auth/signin` – Login
-* `POST /auth/forgot-password` – Send OTP to Email
-* `POST /auth/reset-password` – Reset Password via OTP
-* `POST /convert/text-to-sign` – Text Input Conversion
-* `POST /convert/voice-to-sign` – Voice Input Conversion
-
+- `POST /auth/signup` – Register a new user
+- `POST /auth/signin` – Login
+- `POST /auth/forgot-password` – Send OTP to email
+- `POST /auth/reset-password` – Reset password via OTP
+- `POST /convert/text-to-sign` – Convert text input to sign language
+- `POST /convert/voice-to-sign` – Convert voice input to sign language
 
 ---
 
 ## 👨‍💻 Author
 
-**Tanmay**
+**Tanmay**  
 GitHub: [@Blitzkrieg28](https://github.com/Blitzkrieg28)
 
 ---
-
